@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>HomePage</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -9,25 +9,25 @@
 
 <div class="Bwrappers">	
 		<ul class="nav">
-			<li><a href="#">HOME</a></li>
-			<li><a href="#">ABOUT US</a></li>
-			<li><a href="#" class="downarrow">SERVICES</a> 
+			<li class="navLi"><a href="#">HOME</a></li>
+			<li class="navLi"><a href="#">ABOUT US</a></li>
+			<li class="navLi"><a href="#" class="downarrow">SERVICES</a> 
 				<ul class="subnav">
 					<li><a href="">Web design</a></li>
 					<li><a href="">Wordpress Design</a></li>
-					<li><a href="">Mobile App Develoment</a></li>
+					<li><a href="">Mobile App Deveploment</a></li>
 					<li><a href="">Internet marketing</a></li>
-					<li><a href="">Socila media Management</a></li>
+					<li><a href="">Social media Management</a></li>
 				</ul>
 			</li>
-			<li ><a href="#" class="downarrow">PORTFOLIO</a>
+			<li class="navLi"><a href="#" class="downarrow">PORTFOLIO</a>
 				<ul class="subnav">
-					<li><a href="">Your profil <div class="smiley"></div></a></li>
-					<li><a href="">Another profil <div class="smiley"></div></a></li>
+					<li><div class="smiley"></div><a href="">Your profil </a></li>
+					<li><div class="smiley"></div><a href="">Another profil </a></li>
 				</ul>
 			</li>
-			<li><a href="#">BLOG</a></li>
-			<li><a href="#">CONTACT US</a></li>
+			<li class="navLi"><a href="#">BLOG</a></li>
+			<li class="navLi"><a href="#">CONTACT US</a></li>
 		</ul>
 	<div class="logotype">Bis<span>Lite</span></div>
 </div>
@@ -44,22 +44,34 @@
 
 <div class="Bwrappers next">
 	<div>
-		<h6 class="pencil">CLEAN THEME</h6>
+    	<button class="button">
+    	    <i class="pencil icon"></i>
+    	</button>
+		<h6>CLEAN THEME</h6>
 		<p>Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi. </p>
 		<a href="">Read more</a>
 	</div>
 	<div>
-		<h6 class="fullscreen">RESPONSIVE DESIGN</h6>
+    	<button class="button">
+    	    <i class="fullscreen icon"></i>
+    	</button>
+		<h6>RESPONSIVE DESIGN</h6>
 		<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod placerat dui et tincidunt. Sed sollicitudin posuere auctor. Phasellus at ultricies nisl. Integer at leo eros.</p>
 		<a href="">Read more</a>
 	</div>
 	<div>
-		<h6 class="lists">FULLY LAYERD PSD</h6>
+    	<button class="button">
+    	    <i class="lists icon"></i>
+    	</button>
+		<h6>FULLY LAYERD PSD</h6>
 		<p> Phasellus lobortis metus non augue sodales volutpat. Vestibulum sit amet nibh eros, hendrerit venenatis est. In vitae nulla nec purus cursus pretium sed id magna.</p>
 		<a href="">Read more</a>
 	</div>
 	<div>
-		<h6 class="plane">READY FOR CODING</h6>
+    	<button class="button">
+    	    <i class="plane icon"></i>
+    	</button>
+		<h6>READY FOR CODING</h6>
 		<p> Vivamus convallis feugiat mauris sed posuere. Nam rutrum, quam quis euismod commodo, elit est porta quam, non placerat eros neque porta ante. Fusce quis odio urna. </p>
 		<a href="">Read more</a>
 	</div>
@@ -74,7 +86,6 @@
 		</ul>
 	</div>
 
-	<hr>
 	<div class="latest pic">
 		<div class="gallery">
 			<img src="img/notes.png" alt="notes">
@@ -105,8 +116,6 @@
 				</div>
 		</div>
 	</div>
-
-	<hr>
 
 	<div class="latest">
 		
@@ -166,8 +175,8 @@
 	</div>
 	<div>
 		<h6>Contact us</h6>
-			<b> BisLite Inc. </b>
-			<p>Always Street 265
+			<strong> BisLite Inc. </strong>
+			<p class="start">Always Street 265
 			0X - 125 - Canada</p>
 			<p class="end"> Phone: 987-6543-210
 			Fax: 987-6543-210
@@ -175,22 +184,27 @@
 	</div>
 	<div>
 		<h6>Connect with us</h6>
+		<div class="social">
 		<a href="facebook.com" target="blank"><img src="img/facebook.png" alt="facebook"></a>
 		<a href="dribble.com" target="blank"><img src="img/range.png" alt="range"></a>
 		<a href="ru.pinterest.com" target="blank"><img src="img/coolP.png" alt="coolP"></a>
 		<a href="linkedin.com" target="blank"><img src="img/in.png" alt="in"></a>
 		<a href="skype.com" target="blank"><img src="img/skype.png" alt="skype"></a>
 		<a href="#" target="blank"><img src="img/share.png" alt="share" ></a>
-
+        </div>
 	</div>
 </footer>
 
 <div class="Bwrappers finish">
-	<p>© Copyright 2012 - BisLite Inc. All rights reserved. Some free icons used here are created by <a href="#"> Brankic1979.com.</a> 
+	<p>
+    	© Copyright 2012 - BisLite Inc. All rights reserved. Some free icons used here are created by <a href="#"> Brankic1979.com.</a> 
 	</p>
-	<p> Client Logos are copyright and trademark of the respective owners / companies. </p>
+	<p> 
+    	Client Logos are copyright and trademark of the respective owners / companies.
+    </p>
 
-	<div class="logotype">Bis<span>Lite</span>
+	<div class="logotype bottomLogo">
+    	Bis<span>Lite</span>
 	</div>
 </div>
 

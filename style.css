@@ -1,3 +1,4 @@
+
 body {
 	font-family: arial;
 	margin: 0;
@@ -32,12 +33,11 @@ body {
 				display: block;
 				color: black;
 				text-decoration: none;
-				padding: 20px 10px;
+				padding: 5px 10px 10px 10px;
+				border-top: 5px solid transparent;
 			}
-			.nav li a:hover {
-				padding-top: 5px;
-				padding-bottom: 5px;
-				border-top: 3px solid #2aacc8;
+			.nav .navLi:hover > a {
+				border-top-color: #2aacc8;
 				color: #2aacc8;
 				background-color: white;
 			}
@@ -60,6 +60,7 @@ body {
 					ul.subnav > li {
 					    display: block;
 					    border-bottom: 1px solid lightgray;
+					    display: flex;
 					}
 
 					ul.subnav > li .smiley {
@@ -69,9 +70,12 @@ body {
 					height: 2em;
 					position: relative;
 					width: 2em;
-					margin-top: 0.3em;
+					margin: 0.7em;
 					}
-					 
+                    .smiley {
+                        float: left;
+                        margin: 5px;
+                    }
 					.smiley::after, .smiley::before {
 						background-image: -ms-radial-gradient(transparent 35%, #2C2C2C 35%);
 						background-image: -webkit-radial-gradient(transparent 35%, #2C2C2C 35%);
@@ -112,6 +116,7 @@ body {
 						    display: block;
 						  	z-index: 1;
 						  	border-bottom: 3px solid #2aacc8;
+						  	padding: 0;
 						}
 		.downarrow:after {
 			content: "\25be";
@@ -126,7 +131,7 @@ body {
 		margin-top: 40px;
 		font-size: 50px;
 		line-height: 20px;
-		font-family: Lato;
+		font-family: arial;
 		font-weight: 900;
 		color: black;
 	}
@@ -148,6 +153,7 @@ span {
 				display: block;
 				margin: 0 auto;
 				max-width: 1000px;
+				border-left: 56px solid #dd5835;
 			}
 			.foil ul {
 				text-align: center;
@@ -172,6 +178,7 @@ span {
 
 			.next {
 				padding: 30px;
+				padding-top: 50px;
 			}
 
 			.next > div  {
@@ -179,6 +186,7 @@ span {
 				width: 23%;
 				margin: 5px;
 				vertical-align: top;
+				margin-right: 10px;
 			}
 
 			.next h6 {
@@ -186,53 +194,54 @@ span {
 				font-weight: 700;
 				line-height: 20px;
 				text-transform: uppercase;
+				margin: 10px;
+				padding-left: 50px;
 			}
 
-			.next h6:before {
-				content: "";
+			.next .button {
+    			float: left;
 				background-color: #2aacc8;
-				display: inline-block;
+				border: none;
 				width: 40px;
 				height: 40px;
 				border-radius: 50%;
 				background-position: center;
-				margin-right: 5%;
-				vertical-align: top;
-				margin-bottom: 5%;
+				padding: 5px;
 			}
-
-			h6.pencil:before {
+            .icon {
+                background-repeat: no-repeat;
+				height: 17px;
+                width: 17px;
+                background-size: 16px;
+                display: inline-block;
+            }
+			.pencil{
 				background-image: url(img/pencil.png);
-				background-repeat: no-repeat;
 			}
 
-			h6.fullscreen:before {
+			.fullscreen {
 				background-image: url(img/fullscreen.png);
-				background-repeat: no-repeat;
 			}
 
-			h6.lists:before {
+			.lists {
 				background-image: url(img/list.png);
-				background-repeat: no-repeat;
 			}
-			h6.plane:before {
+			.plane {
 				background-image: url(img/airplane.png);
-				background-repeat: no-repeat;
 			}
 			
 
 		.next p {
+    		margin-top: 42px;
 			font-size: 13px;
-			font-weight: 400;
 			line-height: 20px;
 			color: #363636;
 			padding-bottom: 20px;
-			height: 120px;
-			overflow: hidden;
 		}
 
 		.next a {
 			color: #2aacc8;
+			text-decoration: none;
 		}
 
 		.next a:before {
@@ -253,11 +262,14 @@ span {
 		max-width: 1000px;
 		margin: 0 auto;
 		position: relative;
-		padding: 15px 0;
+		padding: 20px 0;
+		border-bottom: 1px solid lightgray;
 	}
 
 		.latest ul {
-			float: right;
+			position: absolute;
+            right: 0;
+            top: 0;
 		}
 
 			.latest li {
@@ -286,7 +298,8 @@ span {
 			}
 
 		.pic {
-			text-align: center;
+			display: flex;
+            justify-content: space-between;
 		}
 
 		.gallery {
@@ -308,11 +321,12 @@ span {
 	}
 
 	.gallery:hover .other {
-		display: block;
 		height: 50%;
-	}
+		display: flex;
+        justify-content: center;
+}
 	.other a {
-		vertical-align: middle;
+		padding: 10px;
 	}
 	
 		.other a:before {
@@ -334,11 +348,6 @@ span {
 				vertical-align: middle;
 			}
 
-hr {
-	color: lightgray;
-	max-width: 1000px;
-	margin-bottom: 10px;
-	}
 	
 	.person {
 		display: inline-block;
@@ -373,7 +382,11 @@ hr {
 				background-repeat: no-repeat;
 				clear: both;
 			}
-
+        
+        .clientsicon {
+            position: absolute;
+            right: -10px;
+        }
 		.person p {
 			font-size: 14px;
 			width: 90%;
@@ -392,6 +405,7 @@ hr {
 		}
 
 	.download {
+    	position: relative;
 		max-width: 1000px;
 		height: 140px;
 		background-color: #e8fcfe;
@@ -406,21 +420,19 @@ hr {
 			font-weight: 400;
 			line-height: 26px;
 			display: inline-block;
-			padding: 30px;
-
+			padding: 10px 10px 10px 27px;
 		}
 
 		.download b {
+    		position: absolute;
+            top: 27%;
+            right: 3%;
 			display: inline-block;
 			color: #0d0707;
-			font-weight: 700;
 			line-height: 60px;
-			text-transform: uppercase;
 			text-align: center;
-			padding: 0px;
 			width: 240px;
 			height: 60px;
-			vertical-align: middle;
 			background-color: #2aacc8;
 			background-image: linear-gradient(to top, #2aacc8 0%, #2aacc8 0%, #60cede 15%, #72dae6 50%, #81e4ed 100%);
 			border: 1px solid #2aacc8;
@@ -445,10 +457,16 @@ hr {
 			text-transform: uppercase;
 		}
 
-footer {
-	text-align: justify;
+footer ul {
+    list-style-type: none;
+    padding-left: 0;
 }
-
+strong {
+    font-size: 14px;
+}
+footer .start {
+    margin-top: 0;
+}
 	footer > div {
 		display: inline-block;
 		width: 14%;
@@ -490,7 +508,16 @@ footer {
 	footer > div .end {
 		margin-top: 25px;
 	}
-
+.social {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.social a {
+    padding: 5px;
+    height: 53px;
+    width: 53px;
+}
 	footer > div > ul > li > a {
 		line-height: 26px;
 		text-decoration: none;
@@ -516,6 +543,7 @@ footer {
 		line-height: 20px;
 		text-align: left;
 		float: left;
+		margin: 0;
 	}
 
 	.finish a {
@@ -527,3 +555,7 @@ footer {
 		display: inline-block;
 		clear: both;
 	}
+	
+	.bottomLogo {
+    	float: right;
+    	margin-top: 0;
